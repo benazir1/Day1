@@ -1,0 +1,68 @@
+Difference Between HTTP1 and HTTP2:
+
+HTTP stands for hypertext transfer protocol & it is used in client-server communication.
+1.By using HTTP user sends the request to the server & the server sends the response to the user.
+
+HTTP1.1-HTTP/1.1 loads resources one after the other.
+         if one resource cannot be loaded, it blocks all the other resources behind it.
+
+        HTTP/1.1 A server only serves content to a client device if the client asks for it.
+
+HTTP 2-HTTP/2 is able to use a single TCP connection to send multiple streams of data 
+        at once so that no one resource blocks any other resource.
+
+      HTTP/2 solves this problem by allowing a server to "push" content to a client before the client asks for it.
+
+
+      The key differences HTTP/2 has to HTTP/1.x are as follows:
+
+        It is binary instead of textual
+        It is fully multiplexed, instead of ordered and blocking
+        It can use one connection for parallelism
+        It uses header compression to reduce overhead
+        It allows Server Pushing to add responses proactively into the Browser cache.
+
+
+2.Objects and its internal representation in Javascript
+
+    Creating Objects in JavaScript:
+      1.By object literal
+      2.By creating instance of Object directly (using new keyword)
+   
+By object literal:
+
+The syntax of creating object using object literal is given below:
+object={property1:value1,property1:value......propertyN:valueN}
+Property and value is separated by colon(:).
+Example:
+ var person={fname:"xxx",lname:"yyy",age:25};
+
+By creating instance of Object directly (using new keyword):
+The syntax of creating object directly is given below:
+
+var objectname=new object();
+  new keyword is used to create object.
+
+Example:
+var emp=new Object();
+emp.id=101;
+emp.name="xxx";
+emp.salary=5000;
+
+Accessing JavaScript Objects:
+The syntax for accessing the property of an object is:
+
+objectName.property
+
+or
+
+objectName[“property”]
+
+Accessing ‘fname’ from example 1 using dot operator,
+       person.fname
+
+Accessing ‘name’ form example 2 using [],
+
+  emp["name"]
+
+
